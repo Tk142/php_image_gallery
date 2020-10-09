@@ -7,21 +7,34 @@
                 <small>Subheading</small>
             </h1>
 
-            <?php
+            <!-- <?php
                 
-                $result_set = User::find_all_users();
-                echo "find_all_users query" . "<br>";
-                while($row = mysqli_fetch_array($result_set)) {
-                    echo "username: " . $row["username"] . ", first_name: " . $row["first_name"] . ", last_name: " . $row["last_name"] . "<br>";
+                // $result_set = User::find_all_users();
+                // echo "find_all_users query" . "<br>";
+                // while($row = mysqli_fetch_array($result_set)) {
+                //     echo "username: " . $row["username"] . ", first_name: " . $row["first_name"] . ", last_name: " . $row["last_name"] . "<br>";
+                // }
+                // echo "<br>";
+
+                // echo "find_one_user by id" . "<br>";
+                // $found_user = User::find_user_by_id(2);
+
+                // $user = User::instantiation($found_user);
+
+                // echo $user->id;
+            ?> -->
+
+            <?php
+                echo "find_all_users";
+                $users = User::find_all_users();
+                foreach($users as $user) {
+                    echo $user->username . "<br>";
                 }
-                echo "<br>";
 
-                echo "find_one_user by id" . "<br>";
-                $found_user = User::find_user_by_id(2);
+                echo "find_user_by_id" . "<br>";
+                $the_user = User::find_user_by_id(1);
+                echo $the_user->id . " " . $the_user->username;
 
-                $user = User::instantiation($found_user);
-
-                echo $user->id;
             ?>
 
 
