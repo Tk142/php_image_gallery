@@ -7,7 +7,7 @@
                 <small>Subheading</small>
             </h1>
 
-            <!-- <?php
+            <?php
                 
                 // $result_set = User::find_all_users();
                 // echo "find_all_users query" . "<br>";
@@ -22,19 +22,36 @@
                 // $user = User::instantiation($found_user);
 
                 // echo $user->id;
-            ?> -->
+            ?>
 
             <?php
-                echo "find_all_users";
-                $users = User::find_all_users();
-                foreach($users as $user) {
-                    echo $user->username . "<br>";
-                }
 
-                echo "find_user_by_id" . "<br>";
-                $the_user = User::find_user_by_id(1);
-                echo $the_user->id . " " . $the_user->username;
+            echo "find_all_users <br>";
+            $users = User::find_all_users();
+            foreach($users as $user) {
+                echo $user->username . "<br>";
+            }
 
+                // echo "find_user_by_id" . "<br>";
+                // $the_user = User::find_user_by_id(1);
+                // echo $the_user->id . " " . $the_user->username;
+
+            ?>
+
+            <?php
+
+            // $newUser = new User();
+            // $newUser->username = "cj";
+            // $newUser->password = "pass";
+            // $newUser->first_name = "Carl";
+            // $newUser->last_name = "Johnson";
+            // $newUser->create();
+
+            $user = User::find_user_by_id(1);
+            $user->last_name = "Gibbs";
+            $user->update();
+            
+            
             ?>
 
 
