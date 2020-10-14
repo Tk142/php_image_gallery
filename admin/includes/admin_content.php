@@ -40,6 +40,7 @@
 
             <?php
 
+            // CRUD - create user
             // $newUser = new User();
             // $newUser->username = "cj";
             // $newUser->password = "pass";
@@ -47,9 +48,14 @@
             // $newUser->last_name = "Johnson";
             // $newUser->create();
 
-            $user = User::find_user_by_id(1);
-            $user->last_name = "Gibbs";
-            $user->update();
+            // CRUD - update user
+            // $user = User::find_user_by_id(1);
+            // $user->last_name = "Gibbs";
+            // $user->update();
+
+            //CRUD - delete user
+            // $user = User::find_user_by_id(7);
+            // $user->delete();
             
             
             ?>
