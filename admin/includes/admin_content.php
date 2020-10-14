@@ -42,7 +42,7 @@
 
             // CRUD - create user
             // $newUser = new User();
-            // $newUser->username = "cj";
+            // $newUser->username = "cj3";
             // $newUser->password = "pass";
             // $newUser->first_name = "Carl";
             // $newUser->last_name = "Johnson";
@@ -56,6 +56,11 @@
             //CRUD - delete user
             // $user = User::find_user_by_id(7);
             // $user->delete();
+
+            // $user = User::find_user_by_id(2);
+            // $user->username = "JackyDoe";
+            // $user->first_name ="Jacky";
+            // $user->save();
             
             
             ?>
