@@ -27,7 +27,7 @@
             <?php
 
             echo "find_all_users <br>";
-            $users = User::find_all_users();
+            $users = User::find_all();
             foreach($users as $user) {
                 echo $user->username . "<br>";
             }
@@ -42,25 +42,32 @@
 
             // CRUD - create user
             // $newUser = new User();
-            // $newUser->username = "cj3";
+            // $newUser->username = "cj4";
             // $newUser->password = "pass";
             // $newUser->first_name = "Carl";
             // $newUser->last_name = "Johnson";
             // $newUser->create();
 
             // CRUD - update user
-            // $user = User::find_user_by_id(1);
+            // $user = User::find_by_id(1);
             // $user->last_name = "Gibbs";
             // $user->update();
 
             //CRUD - delete user
-            // $user = User::find_user_by_id(7);
+            // $user = User::find_by_id(12);
             // $user->delete();
 
-            // $user = User::find_user_by_id(2);
-            // $user->username = "JackyDoe";
-            // $user->first_name ="Jacky";
+            // CRUD creates new or updates
+            // $user = User::find_by_id(2);
+            // $user->username = "BillJoe";
+            // $user->first_name ="Bill";
             // $user->save();
+
+            $photos = Photo::find_all();
+
+            foreach($photos as $photo) {
+                echo $photo->title;
+            }
             
             
             ?>
